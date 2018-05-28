@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>Home</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+
+<body>
+    <video class="media" autoplay="true" loop>
+                <source  src="backgroundVideo.mp4" srcset="background.jpg 1000w" type="video/mp4">
+    </video> 
+    <div class="container">      
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#" style="font-family: 'Open Sans', sans-serif;">Yuwei Tang</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="colapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.pdf" style="color:white;font-family: 'Open Sans', sans-serif;">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/yuweitang98" style="color:white;font-family: 'Open Sans', sans-serif;">LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/bill.tang.58" style="color:white;font-family: 'Open Sans', sans-serif;">Facebook</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbotron"  style="background:transparent;" >
+            <h1 class="text-center display-3" style="color:white;">Website Coming Soon</h1>
+            <div class="jumbotron"  style="background:transparent;" >
+                <h1 class="text-center display-4" id="MyClockDisplay" style="color:white;"></h1>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        <!-- Hide JavaScript
+        function showTime(){
+            var date = new Date();
+            var h = date.getHours(); 
+            var m = date.getMinutes(); 
+            var s = date.getSeconds();
+        var amOrPm = "PM";
+            if(h < 12 ) {
+                amOrPm = "AM";
+            }
+            if(h == 0){
+                h = 12;
+            }
+            if(h > 12 ) {
+                h = h - 12;
+            }
+            h = (h<10) ? "0" + h : h;
+            m = (m<10) ? "0" + m : m;
+            s = (s<10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s + " " + amOrPm;
+            document.getElementById("MyClockDisplay").innerText = time;
+            document.getElementById("MyClockDisplay").textContent = time;
+
+            setTimeout(showTime, 1000);
+        }
+
+
+        showTime();
+        -->
+    </script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
