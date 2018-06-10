@@ -15,6 +15,7 @@
     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 
 <body style="background: url('/assets/background.jpg') no-repeat center center fixed; background-size:cover;">
@@ -40,24 +41,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="work.html" style="font-family: 'Open Sans', sans-serif;">Work Experences</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/assets/resume.pdf" style="font-family: 'Open Sans', sans-serif;">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/yuweitang98" style="font-family: 'Open Sans', sans-serif;">LinkedIn</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.facebook.com/bill.tang.58" style="font-family: 'Open Sans', sans-serif;">Facebook</a>
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
+    
     <div class="container navMarginTop">
-       <div>
-            <h1 class="text-center display-3" style="color:white;">UofT ECE2T0+T1+PEY</h1>
+        <div>
+            <h1 class="display-3" style="color:white;">I Wanna Be an Engineer</h1>
+            <h1 class="display-3" style="color:white;">UofT ECE2T0+T1+PEY</h1>
         </div>
-        <div class="jumbotron"  style="background:transparent;" >
+        <div class="jumbotron" style="background:transparent;">
             <h1 class="text-center display-4" id="MyClockDisplay" style="color:white;"></h1>
         </div>
     </div>
@@ -75,42 +70,58 @@
         </div>
     </div>
     <div class="container transparent setHeight">
-        
+
     </div>
-    <script type="text/javascript">
-        <!-- Hide JavaScript
-        function showTime(){
-            var date = new Date();
-            var h = date.getHours(); 
-            var m = date.getMinutes(); 
-            var s = date.getSeconds();
-        var amOrPm = "PM";
-            if(h < 12 ) {
-                amOrPm = "AM";
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light betterBackground ">
+        <div class="container">
+            <h5 class="whiteh3" style="font-family: 'Open Sans', sans-serif;">Copyright &copy; 2017-2018 Yuwei Tang</h5>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/bill.tang.58"><i class="fab fa-facebook-square fa-lg"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/yuweitang98"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:yuwei.tang@mail.utoronto.ca"><i class="fas fa-envelope fa-lg"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <script type="text/javascript">
+            function showTime() {
+                var date = new Date();
+                var h = date.getHours();
+                var m = date.getMinutes();
+                var s = date.getSeconds();
+                var amOrPm = "PM";
+                if (h < 12) {
+                    amOrPm = "AM";
+                }
+                if (h == 0) {
+                    h = 12;
+                }
+                if (h > 12) {
+                    h = h - 12;
+                }
+                h = (h < 10) ? "0" + h : h;
+                m = (m < 10) ? "0" + m : m;
+                s = (s < 10) ? "0" + s : s;
+
+                var time = h + ":" + m + ":" + s + " " + amOrPm;
+                document.getElementById("MyClockDisplay").innerText = time;
+                document.getElementById("MyClockDisplay").textContent = time;
+
+                setTimeout(showTime, 1000);
             }
-            if(h == 0){
-                h = 12;
-            }
-            if(h > 12 ) {
-                h = h - 12;
-            }
-            h = (h<10) ? "0" + h : h;
-            m = (m<10) ? "0" + m : m;
-            s = (s<10) ? "0" + s : s;
-
-            var time = h + ":" + m + ":" + s + " " + amOrPm;
-            document.getElementById("MyClockDisplay").innerText = time;
-            document.getElementById("MyClockDisplay").textContent = time;
-
-            setTimeout(showTime, 1000);
-        }
 
 
-        showTime();
-        -->
-    </script>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+            showTime();
+        </script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

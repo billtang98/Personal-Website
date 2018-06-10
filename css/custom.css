@@ -15,7 +15,8 @@ video {
 }
 
 .betterBackground {
-    background-color: rgba(153, 198, 249,0.7);
+    background-color: rgb(147, 186, 249);
+    <!-- rgba(153, 198, 249,0.7); -->
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -40,4 +41,14 @@ video {
 
 .setHeight {
     height: 1000px;
+}
+
+.whiteh3 {
+    color: white;
+}
+
+.footer {
+    background-color: rgb(147, 186, 249);
+    height: 50px;
+    color: white;
 }
