@@ -50,7 +50,8 @@
     <div class="container navMarginTop">
         <div>
             <h1 class="display-3" style="color:white;">I Wanna Be an Engineer</h1>
-            <h1 class="display-3" style="color:white;">UofT ECE2T0+T1+PEY</h1>
+            <h1 class="display-3" style="color:white;"><span id="expand" onmouseover="expand()" onmouseout="back()">UofT</span></h1>
+            <h1 class="display-3" style="color:white;"><span id="textSwap"></span>2T0+T1+PEY</h1>
         </div>
         <div class="jumbotron" style="background:transparent;">
             <h1 class="text-center display-4" id="MyClockDisplay" style="color:white;"></h1>
@@ -113,12 +114,48 @@
                 var time = h + ":" + m + ":" + s + " " + amOrPm;
                 document.getElementById("MyClockDisplay").innerText = time;
                 document.getElementById("MyClockDisplay").textContent = time;
-
                 setTimeout(showTime, 1000);
             }
-
-
+            function test() {
+                var name = "ECE";
+                var num = 0;
+                var speed = 50;
+                textSwap();
+                function textSwap() {
+                    if (num < 30) {
+                        if (name == "ECE") {
+                            name = "CIV";
+                        }
+                        else if (name == "CIV") {
+                            name = "MSE";
+                        }
+                        else if (name == "MSE") {
+                            name = "MIE";
+                        }
+                        else if (name == "MIE") {
+                            name = "EngSci";
+                        }
+                        else if (name == "EngSci") {
+                            name = "ECE";
+                        }
+                        document.getElementById("textSwap").innerText = name;
+                        document.getElementById("textSwap").textContent = name;
+                        num++;
+                        speed = speed + 5;
+                        setTimeout(textSwap, speed);
+                    }
+                }
+            }
+            function expand() {
+                document.getElementById("expand").innerText = "University of Toronto ";
+                document.getElementById("expand").textContent = "University of Toronto ";
+            }
+            function back() {
+                document.getElementById("expand").innerText = "UofT ";
+                document.getElementById("expand").textContent = "UofT ";
+            }
             showTime();
+            test();
         </script>
         <script src="/js/jquery.min.js"></script>
         <script src="/js/popper.min.js"></script>

@@ -53,6 +53,22 @@
             <h1 class="text-center display-4" id="MyClockDisplay" style="color:white;"></h1>
         </div>
     </div>
+    <div class="container transparent setHeight">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action" onclick="showText1()">C++</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="showText2()">C</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="showText3()">HTML</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="showText4()">CSS</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="showText5()">Java</button>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <p class="display-3" id="special">HELLOS SDFSDF</p>
+            </div>
+        </div>
+    </div>
     <nav class="navbar fixed-bottom navbar-expand-lg navbar-light betterBackground ">
         <div class="container">
             <h5 class="whiteh3" style="font-family: 'Open Sans', sans-serif;">Copyright &copy; 2017-2018 Yuwei Tang</h5>
@@ -71,6 +87,28 @@
             </div>
         </div>
     </nav>
+    <script>
+        function showText1() {
+            document.getElementById("special").innerText = "1";
+            document.getElementById("special").textContent = "1";
+        }
+        function showText2() {
+            document.getElementById("special").innerText = "2";
+            document.getElementById("special").textContent = "2";
+        }
+        function showText3() {
+            document.getElementById("special").innerText = "3";
+            document.getElementById("special").textContent = "3";
+        }
+        function showText4() {
+            document.getElementById("special").innerText = "4";
+            document.getElementById("special").textContent = "4";
+        }
+        function showText5() {
+            document.getElementById("special").innerText = "5";
+            document.getElementById("special").textContent = "5";
+        }
+    </script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
