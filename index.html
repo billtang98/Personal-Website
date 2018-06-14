@@ -50,8 +50,15 @@
     <div class="container navMarginTop">
         <div>
             <h1 class="display-3" style="color:white;">I Wanna Be an Engineer</h1>
-            <h1 class="display-3" style="color:white;"><span id="expand" onmouseover="expand()" onmouseout="back()">UofT</span></h1>
-            <h1 class="display-3" style="color:white;"><span id="textSwap"></span>2T0+T1+PEY</h1>
+            <h1 class="display-3" style="color:white;"><span id="UofT" onmouseover="UofTExpand()" onmouseout="UofTBack()">UofT</span></h1>
+            <div class="row">
+                <div class="text-right" style="width:125px;">
+                    <h1 class="display-3" style="color:white;"><span id="textSwap" onmouseover="ECEExpand()" onmouseout="ECEBack()"></span></h1>
+                </div>
+                <div style="padding:0;">
+                    <h1 class="display-3" style="color:white;">2T0+<span id="T1" onmouseover="T1Expand()" onmouseout="T1Back()">T1</span>+<span id="PEY" onmouseover="PEYExpand()" onmouseout="PEYBack()">PEY</span></h1>
+                </div>
+            </div>
         </div>
         <div class="jumbotron" style="background:transparent;">
             <h1 class="text-center display-4" id="MyClockDisplay" style="color:white;"></h1>
@@ -122,7 +129,7 @@
                 var speed = 50;
                 textSwap();
                 function textSwap() {
-                    if (num < 30) {
+                    if (num < 32) {
                         if (name == "ECE") {
                             name = "CIV";
                         }
@@ -133,9 +140,6 @@
                             name = "MIE";
                         }
                         else if (name == "MIE") {
-                            name = "EngSci";
-                        }
-                        else if (name == "EngSci") {
                             name = "ECE";
                         }
                         document.getElementById("textSwap").innerText = name;
@@ -146,13 +150,37 @@
                     }
                 }
             }
-            function expand() {
-                document.getElementById("expand").innerText = "University of Toronto ";
-                document.getElementById("expand").textContent = "University of Toronto ";
+            function UofTExpand() {
+                document.getElementById("UofT").innerText = "University of Toronto ";
+                document.getElementById("UofT").textContent = "University of Toronto ";
             }
-            function back() {
-                document.getElementById("expand").innerText = "UofT ";
-                document.getElementById("expand").textContent = "UofT ";
+            function UofTBack() {
+                document.getElementById("UofT").innerText = "UofT ";
+                document.getElementById("UofT").textContent = "UofT ";
+            }
+            function ECEExpand() {
+                document.getElementById("textSwap").innerText = "Electrical and Computer Engineering ";
+                document.getElementById("textSwap").textContent = "Electrical and Computer Engineering ";
+            }
+            function ECEBack() {
+                document.getElementById("textSwap").innerText = "ECE";
+                document.getElementById("textSwap").textContent = "ECE";
+            }
+            function T1Expand() {
+                document.getElementById("T1").innerText = "TrackOne";
+                document.getElementById("T1").textContent = "TrackOne";
+            }
+            function T1Back() {
+                document.getElementById("T1").innerText = "T1";
+                document.getElementById("T1").textContent = "T1";
+            }
+            function PEYExpand() {
+                document.getElementById("PEY").innerText = "Professional Experience Year";
+                document.getElementById("PEY").textContent = "Professional Experience Year";
+            }
+            function PEYBack() {
+                document.getElementById("PEY").innerText = "PEY";
+                document.getElementById("PEY").textContent = "PEY";
             }
             showTime();
             test();
